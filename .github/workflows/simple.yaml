@@ -11,4 +11,4 @@ jobs: # is object
       - name: mutli line commands
         run: |
           node -v
-          python -v
+          npm -v
