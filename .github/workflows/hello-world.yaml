@@ -6,10 +6,13 @@ jobs:
   js-action:
     runs-on: ubuntu-latest
     steps:
+      - name: commands
+        run: |
+          pwd
+          ls
+          whoami
       - name: log hello world
         id: greeting
         uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: ilyasse
-      - name: output
-        run: echo "${{ steps.greeting.outputs.time }}"
