@@ -20,6 +20,7 @@ jobs: # is object
 
   run-windows:
     runs-on: windows-latest
+    needs: [run-command]
     steps:
       - name: command on powershell
         run: Get-Location
