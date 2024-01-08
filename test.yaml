@@ -1,0 +1,28 @@
+name: ilyasse
+age: 20
+admin: true
+
+object:
+  key1: value1
+  key2: value2
+  key3:
+    key4: value3
+
+array:
+  - item1
+  - item2
+  - key: value
+
+array-of-objects:
+  - key: value
+    name: name
+  - key: value
+    name: name
+
+long-text: > # here they are not new line
+  some text some text some text some text
+  some text some text some text some text
+
+other-long-text: | # here they are new line
+  command1
+  command2
