@@ -6,6 +6,8 @@ jobs:
   js-action:
     runs-on: ubuntu-latest
     steps:
+      - name: use my repository
+        uses: actions/checkout@v4
       - name: commands
         run: |
           pwd
