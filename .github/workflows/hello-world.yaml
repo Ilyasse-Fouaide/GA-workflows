@@ -11,8 +11,9 @@ jobs:
       - name: commands
         run: |
           pwd
-          echo "------LS-----"
+          echo "------ls ~ -----"
           ls ~
+          echo "------ls / -----"
           ls /
           echo "------Whoami-----"
           whoami
