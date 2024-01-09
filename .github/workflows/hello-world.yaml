@@ -11,7 +11,10 @@ jobs:
       - name: commands
         run: |
           pwd
-          ls
+          echo "------LS-----"
+          ls ~
+          ls /
+          echo "------Whoami-----"
           whoami
           echo "----------------------"
           echo $GITHUB_SHA
@@ -19,8 +22,3 @@ jobs:
           echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
           echo "----------------------"
-      - name: log hello world
-        id: greeting
-        uses: actions/hello-world-javascript-action@v1.1
-        with:
-          who-to-greet: ilyasse
