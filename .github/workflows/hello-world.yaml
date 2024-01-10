@@ -10,16 +10,7 @@ jobs:
         uses: actions/checkout@v4
       - name: commands
         run: |
-          pwd
-          echo "------ls ~ -----"
-          ls ~
-          echo "------ls / -----"
-          ls /
-          echo "------Whoami-----"
-          whoami
-          echo "----------------------"
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
-          echo "----------------------"
