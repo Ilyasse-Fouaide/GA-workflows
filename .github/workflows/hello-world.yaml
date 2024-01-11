@@ -2,7 +2,7 @@ name: simple Js Hello world
 
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "0/2 * * * *"
 
 jobs:
   js-action:
