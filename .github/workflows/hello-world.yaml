@@ -1,8 +1,6 @@
 name: simple Js Hello world
 
-on:
-  schedule:
-    - cron: "*/2 * * * *"
+on: [pull_request]
 
 jobs:
   js-action:
