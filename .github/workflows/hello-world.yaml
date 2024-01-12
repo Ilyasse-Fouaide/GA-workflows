@@ -4,20 +4,20 @@ on:
   push:
     branches:
       - main
-      - "feat/*"
-    tags:
-      - v1*
-    paths:
-      - "*.js"
-      - "*.ts"
-  pull_request:
-    branches:
-      - master
-      - "!feat/a" # exclude this branch
-    # branches-ignore:
-    #   - main
-    paths-ignore:
-      - "docs/*"
+  #     - "feat/*"
+  #   tags:
+  #     - v1*
+  #   paths:
+  #     - "*.js"
+  #     - "*.ts"
+  # pull_request:
+  #   branches:
+  #     - master
+  #     - "!feat/a" # exclude this branch
+  #   # branches-ignore:
+  #   #   - main
+  #   paths-ignore:
+  #     - "docs/*"
 
 jobs:
   js-action:
