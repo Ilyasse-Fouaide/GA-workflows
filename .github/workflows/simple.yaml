@@ -25,5 +25,7 @@ jobs: # is object
       - name: command on powershell
         run: Get-Location
       - name: command on bash
-        run: pwd
+        run: |
+          pwd
+          uname -a
         shell: bash
