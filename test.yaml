@@ -26,3 +26,4 @@ long-text: > # here they are not new line
 other-long-text: | # here they are new line
   command1
   command2
+  command3
