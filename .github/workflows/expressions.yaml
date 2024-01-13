@@ -1,0 +1,30 @@
+name: Expressions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    # this job will run on push
+    if: github.event_name == 'push'
+    steps:
+      - name: "Step-1"
+        run: echo "Push"
+      - name: "Step-2"
+        # this will run even the previous steps fails
+        if: always()
+        run: echo "Hello"
+
+  pull-request:
+    runs-on: ubuntu-latest
+    # this job will run on PR
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: "Step-1"
+        run: echo "PR"
