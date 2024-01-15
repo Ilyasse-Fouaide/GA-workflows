@@ -7,10 +7,14 @@ on:
 
 jobs:
   node-version:
+    # with matrix the node-version job will run 2 times,
+    # the first one will run with node-verion 10 in ubuntu
+    # the second time will run with the version 11 of node in macos
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest]
         node_version: [10, 11]
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: "step-1: node-version"
         run: node --version
