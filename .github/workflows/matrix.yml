@@ -7,6 +7,9 @@ on:
 
 jobs:
   node-version:
+    strategy:
+      matrix:
+        node_version: [10, 11]
     runs-on: ubuntu-latest
     steps:
       - name: "step-1: node-version"
@@ -14,6 +17,6 @@ jobs:
       - name: "step-2: set up node"
         uses: actions/setup-node@v4
         with:
-          node-version: 10
+          node-version: ${{ matrix.node_version }}
       - name: "step-3: node-verion"
         run: node --version
