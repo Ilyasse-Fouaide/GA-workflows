@@ -7,13 +7,21 @@ on:
 
 jobs:
   node-version:
-    # with matrix the node-version job will run 2 times,
-    # the first one will run with node-verion 10 in ubuntu
-    # the second time will run with the version 11 of node in macos
+    # with matrix the node-version job will run 4 times,
+    # the first one will run with node-verion 10 in ubuntu and macos
+    # the second time will run with the version 11 of node in ubuntu and macos
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
         node_version: [10, 11]
+        # with exclude context the job will run 2 times,
+        # the first one will run in unubntu with node 10, becasue we exclude node 11
+        # this seconde one wil run in mac-os with node 11, becasue we exclude node 10
+        exclude:
+          - os: ubuntu-latest
+            node_version: 11
+          - os: macos-latest
+            node_version: 10
     runs-on: ${{ matrix.os }}
     steps:
       - name: "step-1: node-version"
