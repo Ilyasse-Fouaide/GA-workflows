@@ -11,3 +11,9 @@ jobs:
     steps:
       - name: "step-1: node-version"
         run: node --version
+      - name: "step-2: set up node"
+        uses: actions/setup-node@v4
+        with:
+          node-version: 10
+      - name: "step-3: node-verion"
+        run: node --version
