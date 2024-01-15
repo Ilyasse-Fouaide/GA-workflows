@@ -2,7 +2,7 @@ name: Context
 
 on:
   push:
-    branches: main
+    branches: master
 
 jobs:
   context:
