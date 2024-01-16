@@ -22,6 +22,12 @@ jobs:
             node_version: 11
           - os: macos-latest
             node_version: 10
+        # with include context the job will run in ubuntu machine 2 times,
+        # once with node 10, we exclude node 11, it will not run in node 11,
+        # and once in node 16, because we include that.
+        include:
+          - os: ubuntu-latest
+            node_version: 16`
     runs-on: ${{ matrix.os }}
     steps:
       - name: "step-1: node-version"
