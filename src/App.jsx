@@ -5,6 +5,7 @@ function App() {
     <div>
       <h1>App</h1>
       <p>Feature-1</p>
+      <p>Feature-2</p>
     </div>
   )
 }
